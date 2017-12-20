@@ -41,6 +41,7 @@ class Car_goods extends React.Component{
 							</div>
 						</div>
 					</div>
+					<h3>已经到最后</h3>
 				</div>
 			)
 	}

@@ -4,6 +4,7 @@ import {Router,Route,hashHistory} from 'react-router'
 
 import CarTop from './car_component/carTop'
 import Cargoods from './car_component/car_goods'
+import Bottom_tab from '../../common_component/bottom_tab'
 
 
 
@@ -23,6 +24,7 @@ class Cart extends React.Component{
 				<div id="Cartbox">
 					<CarTop/>
 					<Cargoods/>
+					<Bottom_tab/>
 				</div>
 			</div>
 			)
