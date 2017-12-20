@@ -1,0 +1,25 @@
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, input, lengend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul,li{
+	list-style: none;
+	margin:0;padding:0;
+}
+
+img{
+	display:block;
+}
+
+body p{
+    display: block;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+body div i{
+	font-size: 0;
+}

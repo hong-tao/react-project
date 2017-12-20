@@ -1,0 +1,106 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:0.373333rem;
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+
+#Cartbox{
+	width:100%;
+	height:100%;
+}
+
+
+//圆形复选框
+#shop_checkbox{
+		display:inline-block;
+		border:1px solid #CCCCCC;
+		width:0.453333rem;
+		height:0.453333rem;
+		border-radius:50%;
+		margin-left:0.373333rem;
+
+}
+
+
+#car_title{
+	height:1.066667rem;
+	line-height:1.066667rem;
+	border-bottom:1px solid #ccc;
+	span{
+		display:inline-block;
+		vertical-align: middle;
+	}
+}
+
+#car_goods{
+	height:2.72rem;
+	border-bottom:1px solid #ccc;
+	#goods_content{
+		margin-top: 0.266667rem;
+		>span{
+			display:inline-block;
+			vertical-align: middle;
+		}
+		img{
+			display:inline-block;
+			vertical-align: middle;
+			width:2.186667rem;
+			height:2.186667rem;
+		}
+		#good_name{
+			display:inline-block;
+			vertical-align: middle;
+			height:2.186667rem;
+			p{
+				width:6.186667rem;
+				padding:0 0.133333rem;
+				margin-bottom:0.08rem !important;
+				span{
+					color:#666;
+					i{
+						font-style:normal;
+					}
+				}
+				span:nth-child(2){
+					margin-left:0.2rem;
+				}
+			}
+			#add_del{
+				color:#666;
+				float:right;
+				margin-bottom:0;
+				button{
+					vertical-align: middle;
+					width:0.613333rem;
+					height:0.533333rem;
+					background:#fff;
+					border:0 none;
+					outline: none;
+					border:1px solid #ccc;
+					color:#666;
+				}
+				input{
+					width:0.8rem;
+					height:0.504rem;
+					vertical-align: middle;
+					border:0 none;
+					outline:none;
+					border-top:1px solid #ccc;
+					border-bottom:1px solid #ccc;
+					text-align: center;
+					color:#666;
+				}
+
+				#add_count{
+					display:block;
+					float:right;
+					margin-right: 0.386667rem;
+				}
+			}
+		}
+	}
+}
