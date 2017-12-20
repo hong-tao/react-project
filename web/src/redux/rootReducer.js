@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
-import datagrid from '../components/datagrid/datagridReducer'
+import backtrack from '../components/backtrack/backtrackReducer.js'
 
 export default combineReducers({
-    datagrid
+    backtrack
 })

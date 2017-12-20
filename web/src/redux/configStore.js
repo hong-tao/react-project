@@ -1,9 +1,9 @@
 import React from 'react'
 import {createStore, applyMiddleware} from 'redux'
-import {ajaxMiddleware} from './ajaxMiddleware'
+// import {ajaxMiddleware} from './ajaxMiddleware'
 import reducer from './rootReducer'
 
-const middleware = applyMiddleware(ajaxMiddleware)
-const store = createStore(reducer, middleware)
+// const middleware = applyMiddleware(ajaxMiddleware)
+const store = createStore(reducer)
 
 export default store
