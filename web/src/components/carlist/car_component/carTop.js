@@ -8,7 +8,7 @@ class CarTop extends React.Component{
 		return (
 			<div>
 				<ul id="CarTop">
-					<li>字体图标</li>
+					<li></li>
 					<li>购物车<span>(2)</span></li>
 					<li>删除</li>
 				</ul>

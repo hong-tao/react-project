@@ -15,7 +15,7 @@ class Car_goods extends React.Component{
 				<div>
 					<div id="car_title">
 						<span id="shop_checkbox"></span>
-						<span>icon</span>
+						<span className="iconfont icon-dianpu"></span>
 						<span>哈尼哈尼仓储店</span>
 						<span>待付款</span>
 					</div>
