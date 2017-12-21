@@ -1,13 +1,13 @@
 //http://visionmedia.github.io/superagent/
 import request from 'superagent'
 
-const LOCAL_SERVER = 'http://localhost:888/';
+const LOCAL_SERVER = 'http://localhost/course/course-code/gz1706/react/php/';
 
 const DEV_SERVER = '';
 const PRO_SERVER = '';
 
 function getUrl(path) {
-    if (path.startsWith('http')) {
+    if (path.startsWith('http') || path.startsWith('https')) {
         return path;
     }
     return `${LOCAL_SERVER}${path}`;
@@ -22,7 +22,7 @@ const HttpClient = {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(res.body);
+                    resolve(res.body || JSON.parse(res.text));
                 }
             });
     }),

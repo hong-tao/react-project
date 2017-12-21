@@ -1,0 +1,44 @@
+ul,li{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.header{
+    height:3.107rem;
+    .header_h{
+        display:flex;
+        height:1.8rem;
+        border-bottom:0.013rem solid #ccc;
+        justify-content:space-between;
+        padding:0 0.267rem;
+        line-height: 1.8rem;
+        
+        i::before{
+            margin-top:0.6rem;
+            font-size:0.667rem;
+        }
+        span{
+            display:inline-block;
+            font-size:0.533rem;
+            color:#000000;
+        }
+    }
+    .header_b{
+        height:1.293rem;
+        ul{
+            display:flex;
+            justify-content:space-between;
+            padding:0 0.4rem;
+            li{
+                height:1.293rem;
+                line-height: 1.293rem;
+                span{
+                    display:inline-block;
+                    font-size:0.4rem;
+                    color:#000;
+                }
+            } 
+        }
+    }
+}

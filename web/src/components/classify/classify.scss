@@ -1,0 +1,49 @@
+.header{
+    .header_hc{
+        height:1.827rem;
+        input{
+            width:8.627rem;
+            display:inline-block;
+            height:1.027rem;
+            background: #E5E6E8;
+            font-size:0.4rem;
+            padding-left:0.667rem;
+            border-radius:0.133rem;
+            border:0;
+            margin-left:0.533rem;
+            margin-top:0.4rem;
+        }
+    }
+    .header_bc{
+        height:1.16rem;
+        line-height:1.16rem;
+        border-bottom:0.013rem solid #ccc;
+        ul{
+            display:flex;
+            justify-content:space-around;
+            margin-bottom:-0.067rem;
+            li{
+                span{
+                    display:inline-block;
+                    font-size:0.4rem;
+                }
+            }
+        }
+        
+    
+    }
+}
+
+.main{
+    .main_lc_r{width:2.507rem;
+        ul{background: #F1F1F1;
+            li{
+                height:1.16rem;
+                line-height: 1.16rem;
+                font-size:0.4rem;
+                text-align:center;
+                border-bottom:0.013rem solid #ccc;
+            }
+        }
+    }
+}

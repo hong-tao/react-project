@@ -1,14 +1,17 @@
 import React from 'react'
-import {Router, Route, hashHistory} from 'react-router'
+import {Router, Route, hashHistory,IndexRoute} from 'react-router'
+
 import AppComponent from '../components/app/appComponent'
 import ProductsComponent from '../components/products/productsComponent'
-import Carlist from '../components/carlist/Cart'
-
-
+import HomeComponent from '../components/home/homeComponent.js'
+import Goodslist from '../components/goodslist/goodslistComponent.js'
+import Classify from  '../components/classify/classifyComponent.js'
 
 export default (
     <Route path="/" component={AppComponent}>
-        <Route path="/products" component={ProductsComponent}></Route>
-        <Route path="/carlist" component={Carlist}></Route>
+        <IndexRoute component={HomeComponent}/>
+        <Route path="products" component={ProductsComponent}></Route>
+        <Route path="goodslist" component={Goodslist}></Route>
+        <Route path="classify" component={Classify}></Route>
     </Route>
 )

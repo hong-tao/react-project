@@ -4,8 +4,8 @@
         // 配置参数
         $servername = 'localhost';
         $username = 'root';
-        $password = 'root';
-        $database = '1000phone';
+        $password = '';
+        $database = 'list';
 
         //连接数据库
         $conn = new mysqli($servername,$username,$password,$database);

@@ -2,6 +2,7 @@ import React from 'react'
 import BacktrackComponent from '../backtrack/backtrackComponent.js'
 
 export default class ProductsComponent extends React.Component{
+    
     render(){
         return (
             <div>
@@ -9,5 +10,5 @@ export default class ProductsComponent extends React.Component{
                 <BacktrackComponent></BacktrackComponent>
             </div>
             )
-    }
+    } 
 }
