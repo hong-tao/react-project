@@ -1,0 +1,56 @@
+//初始化
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  height: 100%;
+}
+
+.ant-layout.ant-layout-has-sider {
+  height: 100%;
+}
+.ant-layout.ant-layout-has-sider .ant-layout-sider{
+  background-color: #fff;
+}
+
+.logo {
+  height: 64px;
+  line-height: 64px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1890ff;
+  text-align: center;
+}
+
+.ant-menu .nav-text a {
+  color: #fff;
+}
+
+.ant-layout .ant-layout-header {
+  border-left: 1px solid #ccc;
+}
+
+.ant-layout .ant-layout-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#components-layout-demo-side .ant-layout-sider-collapsed .anticon {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+#components-layout-demo-side .ant-layout-sider-collapsed .nav-text {
+  display: none;
+}
+
+#components-layout-demo-side .ant-layout-sider-collapsed .ant-menu-submenu-vertical > .ant-menu-submenu-title:after {
+  display: none;
+}
