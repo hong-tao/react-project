@@ -1,0 +1,46 @@
+
+#bottom_tab{
+	width:100%;
+	height:1.366667rem;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	position:fixed;
+	bottom:0;
+	border:2px solid #DDDDDD;
+	li{
+		flex:1;
+		text-align: center;
+		height:1.366667rem;
+		padding-top:0.05667rem;
+		span{
+			display:block;
+			color:#A0A0A0;
+		}
+		span:nth-child(1){
+			height:0.8rem;
+			line-height:0.8rem;
+		}
+		span:nth-child(2){
+			height:0.453333rem;
+			line-height: 0.453333rem;
+			font-size: 0.373333rem;
+		}
+		.icon-shouye{
+			color:#EB6E68;
+		}
+		.iconfont{
+			font-size: 0.8rem;
+		}
+		.icon-fenlei{
+			font-size:0.6rem;
+		}
+		.icon-gouwuche1{
+			font-size:0.7rem;
+		}
+		.icon-WO{
+			font-size:0.68rem;
+		}
+	}
+}
+

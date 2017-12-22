@@ -1,18 +1,18 @@
-import http from '../utils/httpClient'
+import http from '../utils/httpServer.js'
 
 export function ajaxMiddleware(api){
     return function(dispatch){
         return function(action){
-            const {types, url, method = 'get', params} = action
+            const {type, url, params} = action
             if(!url){
                 return dispatch(action)
             }
 
-            api.dispatch({
-                type: 'beforeRequest'
-            })
+            // api.dispatch({
+            //     type: 'beforeRequest'
+            // })
             if(url){
-                http.get(url).then(res => {
+                http.post(url,params).then(res => {
                     api.dispatch({
                         type: 'Requested',
                         response: res

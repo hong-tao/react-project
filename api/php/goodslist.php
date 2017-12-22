@@ -1,8 +1,16 @@
 <?php
     header('Access-Control-Allow-Origin:*');
+
     include './DBHelper.php';
 
+    $params = isset($_POST["params"]) ? $_POST["params"] : null;
+    
+    
     $sql = "select  * from product";
+
+    if($params){
+        $sql .=" where aclass='$params'";
+    }
 
     $result = excute_oop($sql);
 

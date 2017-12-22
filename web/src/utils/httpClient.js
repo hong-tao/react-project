@@ -37,7 +37,7 @@ const HttpClient = {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(res.body);
+                    resolve(res.body || JSON.parse(res.text));
                 }
             });
     })

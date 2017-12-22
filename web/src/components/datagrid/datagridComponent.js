@@ -4,6 +4,7 @@ import * as DataGridActions from './datagridAction'
 
 class DataGridComponent extends React.Component{
     componentDidMount(){
+        console.log(this.props)
         this.props.getData()
     }
 

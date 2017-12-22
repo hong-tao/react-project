@@ -35,7 +35,11 @@
 }
 
 .main{
+    height:13rem;
+    display:flex;
     .main_lc_r{width:2.507rem;
+        height:13rem;
+        float: left;
         ul{background: #F1F1F1;
             li{
                 height:1.16rem;
@@ -46,4 +50,30 @@
             }
         }
     }
+    .main_lc_l{
+        width:7.453rem;
+        height:13rem;
+        overflow:auto;
+        ul{
+            display:flex;
+            flex-wrap:wrap;
+            li{ 
+                margin-top:0.267rem;
+                text-align:center;
+                width:33%;
+                img{
+                    width:70%;
+                    margin-left:0.4rem;
+                }
+                span{
+                    display:inline-block;
+                    font-size:0.4rem;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    height:1.333rem;
 }

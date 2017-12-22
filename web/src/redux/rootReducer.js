@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux'
 
-import datagrid from '../components/datagrid/datagridReducer.js'
+import aa from '../components/classify/classifyReducers.js'
 
 export default combineReducers({
-    datagrid
+    aa
 })
+
