@@ -4,9 +4,12 @@ export default function LightReducer(state = {}, action){
         case "beforeRequest":
             newState.status = '0'
             break;
-        case 'Requested':
+        case 'query':
             newState.status = '1';
             newState.response = action.response;
+            break;
+        case 'param':
+            newState.id = action.params
             break;
 
     }

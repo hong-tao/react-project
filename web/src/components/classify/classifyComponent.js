@@ -33,7 +33,6 @@ class ClassifyComponent extends React.Component{
                     <div className='header_bc'>
                         <ul onClick={this.myclick_c1.bind(this)}>
                             <li><span>分类</span></li>
-                            <li><span>品牌</span></li>
                         </ul>
                     </div>
                 </div>

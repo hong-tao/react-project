@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {hashHistory} from 'react-router'
 
 import * as classifyActions from './classifyAction.js'
 
@@ -40,11 +41,17 @@ class Child1Component extends React.Component{
         this.props.getData(this.props.api,{params:eve.target.innerHTML})
     }
 
+    parameter(e){
+        var id = e.target.parentNode.getAttribute('id')
+        this.props.getParams(id)
+        hashHistory.push('detail')
+    }
+
     list_1(){
         var params = this.props.params;
         if(params){
             var html = params.map((item,index)=>{
-                return <li key={item+index}><img src={'./src/img/shoes/'+item.imgUrl} /><span>{item.detailclass}</span></li>
+                return <li id={item.id} key={item+index}><img src={'./src/img/'+item.imgUrl} /><span>{item.detailclass}</span></li>
             })
         }
         return html
@@ -61,7 +68,7 @@ class Child1Component extends React.Component{
                     </ul>
                 </div>
                 <div className='main_lc_l'>
-                    <ul>
+                    <ul onClick={this.parameter.bind(this)}>
                         {
                           this.list_1()
                         }
@@ -75,6 +82,7 @@ class Child1Component extends React.Component{
 const mapTostate = function(state){
     return {
         params:state.aa.response
+
     }
 }
 

@@ -1,0 +1,179 @@
+div,ul,li{
+    margin: 0;
+    padding: 0;
+}
+.detail_all{
+    display:flex;
+    flex-direction:column;
+}
+.detail_header{
+    display:flex;
+    justify-content:space-between;
+    padding:0 0.267rem;
+    padding-top:0.533rem;
+    height:1.827rem;
+    span{
+        display:inline-block;
+        font-size:0.533rem;
+        color:#000;
+    }
+}
+.detail_main{
+    height:14.0rem;
+    overflow-y:auto;
+}
+.detail_main .slick-list {
+    overflow:hidden;
+    height:6.707rem;
+    .slick-track{
+        height:6.707rem;
+        img{
+            height:100%;
+            width:100%;
+        }
+    }
+}
+
+.d_details{
+    margin-top:0.267rem;
+    border-bottom:0.267rem solid #F2F0FB;
+    padding-left:0.293rem;
+    div{
+        height:2.72rem;
+        p{
+            &:first-of-type{
+                font-size:0.413rem;
+                height:1.067rem;
+                color:#000;
+            }
+            &:nth-of-type(2){
+                font-size:0.347rem;
+                color:#8C8C8C;
+                margin-top:0.2rem;
+            }
+        }
+        div{
+            height:0.573rem;
+            margin-top:0.2rem;
+            span{
+                display:inline-block;
+                margin-right:0.4rem;
+                font-size:0.4rem;
+                &:first-of-type{
+                    color:#DB5657;
+                }
+                &:nth-of-type(2){
+                    width:2.373rem;
+                    background: #DB5657;
+                    color:#FFF7FA;
+                    border-radius:0.267rem;
+                    text-align:center;
+                }
+                &:nth-of-type(3){
+                    color:#8C8C8C;
+                    text-decoration:line-through;
+                }
+            }
+        }
+    }
+}
+
+.safeguard{
+    height:2.133rem;
+    border-bottom:0.267rem solid #F2F1F9;
+    ul{
+        display:flex;
+        justify-content:space-around;
+        li{
+            height:1.88rem;
+            text-align:center;
+            i{
+                display:block;
+                font-size:40px;
+            }
+            span{
+                display:block;
+                font-size:0.427rem;
+            }
+        }
+    }
+}
+
+.introduction{
+    height:13.333rem;
+    p{  
+        height:1.067rem;
+        padding-left:0.4rem;
+        padding-top:0.267rem;
+        border-bottom:0.013rem solid #ccc;
+        span{
+            display:block;
+            font-size:0.4rem;
+            color:#F05469;
+        }
+    }
+    div{
+        img{
+            width:100%;
+        }
+    }
+}
+
+.detail_footer{
+    padding-top:0.533rem;
+    padding-right:0.267rem;
+    padding-left:0.267rem;
+    // position: absolute;
+    // bottom:0;
+    ul{ 
+        margin-bottom:0;
+        display:flex;
+        li{
+            height:1.4rem;
+            &:first-of-type{
+                flex:1;
+                .ant-badge-count{
+                    font-size:0.267rem;
+                    padding:0.013rem 0.133rem;
+                }
+            }
+            &:nth-of-type(2){
+                width:2.573rem;
+                margin-right:0.267rem;
+                margin-left:3.333rem;
+                span{
+                    width:100%;
+                    display:inline-block;
+                    font-size:0.4rem;
+                    height:0.813rem;
+                    line-height: 0.813rem;
+                    text-align:center;
+                    color:#F05469;
+                    border:0.013rem solid #F05469;
+                    border-radius:0.133rem;
+                }
+            }
+            &:nth-of-type(3){
+                width:2.56rem;
+                span{
+                    width:100%;
+                    display:inline-block;
+                    font-size:0.4rem;
+                    height:0.813rem;
+                    line-height: 0.813rem;
+                    text-align:center;
+                    background: #F05469;
+                    color:#fff;
+                    border:0.013rem solid #F05469;
+                    border-radius:0.133rem;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+
