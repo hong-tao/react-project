@@ -1,6 +1,9 @@
 import {combineReducers} from 'redux'
-import products from '../components/products/productsReducer'
+
+import goods from '../components/common/goods/goodsReducer'
+import home from '../components/home/homeReducer'
+import order from '../components/order/orderReducer'
 
 export default combineReducers({
-    products
+    home, goods, order
 })

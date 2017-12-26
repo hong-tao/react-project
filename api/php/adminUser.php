@@ -1,15 +1,15 @@
 <?php
     header('Access-Control-Allow-Origin:*');
 
-    include "DBHelper.php";
+    include "connect.php";
     
 
-    $username = isset($_GET["username"]) ? $_GET["username"] : '';
-    $password = isset($_GET["password"]) ? $_GET["password"] : '';
+    $username = isset($_POST["username"]) ? $_POST["username"] : '';
+    $password = isset($_POST["password"]) ? $_POST["password"] : '';
 
     $key = md5($password);
 
-    $sql = "select * from merchantuser where username = '$username' and password = '$key'";
+    $sql = "select * from adminuser where username = '$username' and password = '$key'";
 
     $result = $conn->query($sql);
     $row = $result->fetch_row();

@@ -3,7 +3,7 @@
 	$servername = 'localhost';
 	$username = 'root';
 	$password = '';
-	$database = 'travel';
+	$database = 'hanihani';
 
 	// 连接数据库
 	$conn = new mysqli($servername,$username,$password,$database);//得到实例对象

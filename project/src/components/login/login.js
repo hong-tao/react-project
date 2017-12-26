@@ -1,40 +1,60 @@
 import React from 'react';
 import { hashHistory} from 'react-router'
-import { Icon, Form, Input, Button, message, Checkbox } from 'antd';
-import style from './login.scss';
+import { Icon, Form, Input, Button, message, Checkbox, Modal } from 'antd';
+import qs from 'qs';
 
+import './login.scss';
 import http from '../../utils/ajax'
 
 const FormItem = Form.Item;
+const confirm = Modal.confirm;
 
 class Login extends React.Component {
   state = {
-    loading: false,
-    checked: false
+    loading: false
   }
 
-  handleSubmit (e) {
-    e.preventDefault();
+  handleSubmit = (e) => {
     this.setState({loading: true});
+    e.preventDefault();
+    // 记住登录密码判断
+    let remember = this.props.form.getFieldValue('remember');
+    let username = this.props.form.getFieldValue('username').trim();
+    let password = this.props.form.getFieldValue('password').trim();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        http.get('adminUser.php',{params: {username: this.props.form.getFieldValue('account').trim(), password: this.props.form.getFieldValue('password').trim()}})
-          .then(res => {
-            this.setState({loading: false});
-            if(res.data === 'ok'){
-              sessionStorage.setItem('token', this.props.form.getFieldValue('account'));
-              hashHistory.push('/');
-            }else {
-              message.error('登录失败，账号或密码错误');
-            }
-          })
-          .catch(err => {})
+        http.post('adminUser.php',qs.stringify({ username: username, password: password}))
+        .then(res => {
+          this.setState({loading: false});
+          if(res.data === 'ok'){
+            // 记住登录密码
+            remember ? localStorage.setItem('token', username) : sessionStorage.setItem('token', password);
+            hashHistory.push('/');
+          }else {
+            message.error('登录失败，账号或密码错误');
+          }
+        })
+        .catch(err => {});
       }
     });
   }
   
-  isChecked(e) {
-    this.setState({checked: !e.target.checked})
+  componentWillMount() {
+    let token = localStorage.getItem('token');
+    if(token){
+      Modal.confirm({
+        title: '检测到登录信息已存在，是否重新登录？',
+        okText: '确认',
+        cancelText: '取消',
+        onOk() {
+          sessionStorage.removeItem('token');
+          localStorage.removeItem('token');
+        },
+        onCancel() {
+          hashHistory.push('/');
+        }
+      });
+    }
   }
 
   render () {
@@ -44,9 +64,9 @@ class Login extends React.Component {
         <div className="main">
           <header>哈尼哈尼后台登录</header>
           <section className="login">
-            <Form onSubmit={this.handleSubmit.bind(this)} >
+            <Form onSubmit={this.handleSubmit} >
               <FormItem>
-                {getFieldDecorator('account', {
+                {getFieldDecorator('username', {
                   rules: [
                     {
                       required: true,
@@ -76,10 +96,16 @@ class Login extends React.Component {
                   valuePropName: 'checked',
                   initialValue: true,
                 })(
-                  <Checkbox onClick={this.isChecked.bind(this)}>记住密码</Checkbox>
+                  <Checkbox>记住密码</Checkbox>
                 )}
               </FormItem>
-              <Button className="btnLogin" type="primary" htmlType="submit" loading={this.state.loading} disabled={this.state.loading}>登 录</Button>
+              <Button 
+                className="btnLogin" 
+                type="primary" 
+                htmlType="submit" 
+                loading={this.state.loading}>
+                登 录
+              </Button>
             </Form>
           </section>
         </div>
@@ -87,10 +113,6 @@ class Login extends React.Component {
     );
   }
 }
-
-// Login.contextTypes = {
-//   router: React.PropTypes.object.isRequired
-// };
 
 Login = Form.create({})(Login);
 

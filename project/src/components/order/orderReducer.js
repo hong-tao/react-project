@@ -1,4 +1,4 @@
-export default function ProductsReducer(state = {}, action){
+export default function OrderReducer(state = {}, action){
     var newState = JSON.parse(JSON.stringify(state));
     switch(action.type){
         case 'beforeRequest':
@@ -6,11 +6,11 @@ export default function ProductsReducer(state = {}, action){
             break;
         case 'Requested':
             newState.status = 1;
-            newState.response = action.response.data;
+            newState.response = action.response;
             break;
         case 'requestError':
             newState.status = -1;
-            newState.error = action.error
+            newState.error = action.error;
             break;
     }
     return newState;

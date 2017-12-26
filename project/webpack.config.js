@@ -7,7 +7,7 @@ module.exports = {
 	entry: './src/app.js', //唯一入口文件
 	output: { //输出目录
 		path: path.resolve(__dirname, './dist'), //打包后的js文件存放的地方(build 后的文件)
-		publicPath: '/dist/', //指定资源文件引用的目录(build 在内存中的位置)
+		publicPath: 'temp/', //指定资源文件引用的目录(build 在内存中的位置)
 		filename: 'bundle.js' //打包后输出的js的文件名
 	},
 	module: {
@@ -61,7 +61,7 @@ module.exports = {
 	],
 	devServer: {
 		contentBase: './',
-		host: 'localhost',
-		port: 8080
+		host: '10.3.135.245',
+		port: 8081
 	}
 };

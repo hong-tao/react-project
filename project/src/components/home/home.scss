@@ -15,18 +15,25 @@ body, html {
 .ant-layout.ant-layout-has-sider {
   height: 100%;
 }
-.ant-layout.ant-layout-has-sider .ant-layout-sider{
+.ant-layout.ant-layout-has-sider .ant-layout-sider {
   background-color: #fff;
 }
 
-.logo {
-  height: 64px;
-  line-height: 64px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #1890ff;
-  text-align: center;
+.ant-layout-sider-children {
+  position: relative;
+  .logo {
+    height: 64px;
+    line-height: 64px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1890ff;
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .ant-menu .nav-text a {
